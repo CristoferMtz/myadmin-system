@@ -36,5 +36,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('admin',App\Http\Controllers\UsuarioController::class);
 require __DIR__.'/auth.php';
+
+Route::get('/usuarios/create', [UsuarioController::class, 'create'])->name('usuarios.create');
+Route::post('/usuarios/store', [UsuarioController::class, 'store'])->name('usuarios.store');
+Route::get('/usuarios/index', [UsuarioController::class, 'index'])->name('usuarios.index');
+Route::delete('/usuarios/{id}', [UsuarioController::class, 'destroy'])->name('usuarios.destroy');
+Route::get('/usuarios/{id}', [UsuarioController::class, 'show'])->name('usuarios.show');
+Route::get('/usuarios/{id}/edit', [UsuarioController::class, 'edit'])->name('usuarios.edit');
+Route::put('/usuarios/{usuario}', [UsuarioController::class, 'update'])->name('usuarios.update');
+Route::patch('/usuarios/{usuario}', [UsuarioController::class, 'update']);
+
+
+

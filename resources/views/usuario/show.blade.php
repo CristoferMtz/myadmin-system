@@ -25,8 +25,8 @@
                             {{ $usuario->name }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Area:</strong>
-                            {{ $usuario->area }}
+                            <strong>Description:</strong>
+                            {{ $usuario->description }}
                         </div>
 
                     </div>
